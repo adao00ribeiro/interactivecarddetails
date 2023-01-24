@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from './../styles/Home.module.scss'
-import { CardFront } from '../components/cardFront'
+import { CardFront, ICardFront } from '../components/cardFront'
 import { CardBack } from '../components/cardBack'
+import { Form } from '../components/Form'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -15,47 +18,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className={styles.containerBackground}>
-          <div className={styles.containerLeft}>
-            <div className={styles.teste}>
-              <CardFront></CardFront>
-              <CardBack></CardBack>
-            </div>
-          </div>
-          <div className={styles.containerRight}>
-            <form className={styles.form} action="" method="post">
-              <div className={styles.containerCardHolder}>
-                <label>Cardholder Name</label>
-                <input type="text" id="fname" name="fname" />
-              </div>
-              <div className={styles.containerCardHolder}>
-                <label>Card Number</label>
-                <input type="text" id="fname" name="fname" />
-              </div>
-              <p>Wrong format, number only</p>
-              <div>
-                <div className={styles.containerDateCVC}>
-                  <div className={styles.containerDate}>
-                    <label>Exp. Date (MM/YY)</label>
-                    <div className={styles.containerDateInputs}>
-                      <input type="text" id="fname" name="fname" />
-                      <input type="text" id="fname" name="fname" />
-                    </div>
-                    <label>Can't be blank</label>
-                  </div>
-                  <div className={styles.containerCVC}>
-                    <label>CVC</label>
-                    <input type="text" id="fname" name="fname" />
-                    <label>Can't be blank</label>
-                  </div>
-                </div>
-              </div>
-              <button>Confirm</button>
-            </form>
-
+      <main className={styles.main}>
+        <div className={styles.containerLeft}>
+          <div className={styles.teste}>
+            <CardFront></CardFront>
+            <CardBack></CardBack>
           </div>
         </div>
+        <div className={styles.containerRight}>
+          <Form></Form>
+        </div>
+
       </main>
     </>
   )

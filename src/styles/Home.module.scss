@@ -1,10 +1,8 @@
-.containerBackground {
-  width: 100vw;
+.main {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 
 }
 
@@ -13,12 +11,14 @@
   height: 100%;
   background-image: url('/images/bg-main-desktop.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
 }
 
 .teste {
+
   margin-left: 100px;
-  margin-top: 90px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -31,66 +31,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-
-}
-
-.form {
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  button {
-    width: 100%;
-    padding: 10px;
-  }
-
-  p {
-    margin-bottom: 3px;
-  }
-}
-
-.containerCardHolder {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.containerDateCVC {
-
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.containerDate {
-
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  input {
-    width: 50px;
-  }
-
-  label {
-    width: auto;
-  }
-}
-
-.containerDateInputs {
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-.containerCVC {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 
 
 }
