@@ -76,42 +76,43 @@ export function Form() {
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.containerCardHolder}>
+            <div className={styles.groupName}>
                 <label>Cardholder Name</label>
-                <input value={infoCards.cardname} onChange={handleInput} placeholder="e.g. Jane Appleseed" type="text" name="cardname" />
+                <input className={styles.input} value={infoCards.cardname} onChange={handleInput} placeholder="e.g. Jane Appleseed" type="text" name="cardname" />
             </div>
-            <div className={styles.containerCardHolder}>
+            <div className={styles.groupNumber}>
+
                 <label>Card Number</label>
-                <input maxLength={19} value={infoCards.cardnumber} onChange={handleInput} placeholder="e.g. 1234 5678 9123 0000" type="text" name="cardnumber" />
+                <input className={styles.input} maxLength={19} value={infoCards.cardnumber} onChange={handleInput} placeholder="e.g. 1234 5678 9123 0000" type="text" name="cardnumber" />
                 {error.numberError &&
-                    <p>Wrong format, number only</p>
+                    <span>Wrong format, number only</span>
                 }
             </div>
-
-            <div>
-                <div className={styles.containerDateCVC}>
-                    <div className={styles.containerDate}>
-                        <label>Exp. Date (MM/YY)</label>
-                        <div className={styles.containerDateInputs}>
-                            <input value={infoCards.cardmes} onChange={handleInput} placeholder="MM" type="text" name="cardmes" />
-                            <input value={infoCards.cardano} onChange={handleInput} placeholder="YY" type="text" name="cardano" />
-                        </div>
-
-                        {error.dateerror &&
-                            <p>Can't be blank</p>
-                        }
-
+            <div className={styles.groupDateCVC}>
+                <div className={styles.containerDate}>
+                    <label>Exp. Date (MM/YY)</label>
+                    <div className={styles.containerDateInputs}>
+                        <input className={styles.input} value={infoCards.cardmes} onChange={handleInput} placeholder="MM" type="text" name="cardmes" />
+                        <input className={styles.input} value={infoCards.cardano} onChange={handleInput} placeholder="YY" type="text" name="cardano" />
                     </div>
-                    <div className={styles.containerCVC}>
-                        <label>CVC</label>
-                        <input value={infoCards.cardcvc} onChange={handleInput} placeholder="e.g. 123" type="text" name="cardcvc" />
-                        {error.cvcerror &&
-                            <p>Can't be blank</p>
-                        }
+                    {error.dateerror &&
+                        <span>Can't be blank</span>
+                    }
+                </div>
+                <div className={styles.containerDate}>
+                    <label>CVC</label>
+                    <div className={styles.containerDateInputs}>
+                        <input className={styles.input} value={infoCards.cardcvc} onChange={handleInput} placeholder="e.g. 123" type="text" name="cardcvc" />
                     </div>
+                    {error.cvcerror &&
+                        <span>Can't be blank</span>
+                    }
                 </div>
             </div>
-            <button onClick={validateCreditCard}>Confirm</button>
-        </form>
+
+            <button className={styles.btn} onClick={validateCreditCard}>Confirm</button>
+
+
+        </form >
     )
 }

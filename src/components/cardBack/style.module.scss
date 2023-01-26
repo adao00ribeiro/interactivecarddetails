@@ -1,5 +1,5 @@
 .cardBack {
-    margin-left: 80px;
+
     width: 380px;
     height: 210px;
     display: flex;
@@ -9,6 +9,8 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.137);
+
+
 }
 
 .cardMain {
@@ -26,4 +28,20 @@
 
     }
 
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .cardBack {
+
+        width: 300px;
+        height: 150px;
+        margin-left: 40px;
+    }
+
+    .cardMain {
+        label {
+            font-size: 14px;
+        }
+
+    }
 }

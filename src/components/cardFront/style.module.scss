@@ -1,4 +1,5 @@
 .cardFront {
+
     width: 380px;
     height: 210px;
     display: flex;
@@ -8,7 +9,6 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 .cardMain {
@@ -61,6 +61,7 @@
 
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     color: white;
 
@@ -71,5 +72,54 @@
     p {
         color: white;
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .cardFront {
+        margin-top: -83px;
+        margin-left: -74px;
+        width: 300px;
+        height: 150px;
+        z-index: 1;
+    }
+
+
+    .circulo1 {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 5rem;
+    }
+
+    .circulo2 {
+        width: 10px;
+        height: 10px;
+        border: 2px solid white;
+        border-radius: 5rem;
+    }
+
+    .cardFrontInfo {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        label {
+            margin-top: 10px;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+
+    .cardFrontInfoNameData {
+        span {
+            font-size: 0.7rem;
+        }
+
+        p {
+            color: white;
+            font-size: 0.7rem;
+        }
     }
 }

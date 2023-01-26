@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.containerLeft}>
-          <div className={styles.teste}>
+          <div className={styles.containerCards}>
             <CardFront></CardFront>
             <CardBack></CardBack>
           </div>
@@ -28,7 +28,6 @@ export default function Home() {
         <div className={styles.containerRight}>
           <Form></Form>
         </div>
-
       </main>
     </>
   )

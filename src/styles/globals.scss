@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
-
 :root {
 
   /*(active input border) */
@@ -12,33 +11,17 @@
   --Very-dark-violet: hsl(278, 68%, 11%);
 }
 
-* {
-
-  padding: 0;
-  margin: 0;
-}
-
 html,
 body {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   font-family: 'Space Grotesk';
   font-size: 18px;
 }
 
-input {
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
-
-}
-
-p {
-  color: red;
-}
-
-input:hover {
-  border: 2px solid var(--Very-dark-violet);
-}
 
 a {
   color: inherit;

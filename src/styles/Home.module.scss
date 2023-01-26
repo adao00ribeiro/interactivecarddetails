@@ -1,36 +1,69 @@
 .main {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
-
 }
 
 .containerLeft {
-  width: 27%;
+
+  width: 30%;
   height: 100%;
   background-image: url('/images/bg-main-desktop.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  margin: auto;
   display: flex;
   align-items: center;
-}
-
-.teste {
-
-  margin-left: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
 }
 
 .containerRight {
-  width: 73%;
-  height: 100%;
+
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.containerCards {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 180px;
 
 
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+  .main {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .containerLeft {
+    width: 100%;
+    height: 200px;
+  }
+
+  .containerRight {
+    width: 100%;
+    margin: auto;
+    padding-top: 3rem;
+  }
+
+  .containerCards {
+
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 0px;
+  }
 }
