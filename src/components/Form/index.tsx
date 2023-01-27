@@ -1,11 +1,11 @@
-import { useContext, useState } from "react"
+import { MutableRefObject, useContext, useRef, useState } from "react"
 import { MyContext } from "../../context/mycontext";
 import { ICardFront } from "../cardFront"
 import styles from "./style.module.scss"
 import validator from 'validator'
 export function Form() {
-    const { infoCards, setInfoCards }: any = useContext(MyContext);
-
+    const { infoCards, setInfoCards, setIsConfirm }: any = useContext(MyContext);
+    const FormRef = useRef<HTMLFormElement>();
     const [error, setError] = useState({
         numberError: false,
         dateerror: false,
@@ -38,13 +38,20 @@ export function Form() {
                 const data = { ...prev, dateerror: true };
                 return data
             });
+
         }
         if (infoCards.cardcvc == "") {
             setError((prev) => {
                 const data = { ...prev, cvcerror: true };
                 return data
             });
+
         }
+        if (error.cvcerror == false || error.dateerror == false && error.numberError == false) {
+
+            setIsConfirm(true);
+        }
+
     }
 
     const handleInput = (event) => {
@@ -75,7 +82,7 @@ export function Form() {
     }
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form} ref={FormRef} onSubmit={handleSubmit}>
             <div className={styles.groupName}>
                 <label>Cardholder Name</label>
                 <input className={styles.input} value={infoCards.cardname} onChange={handleInput} placeholder="e.g. Jane Appleseed" type="text" name="cardname" />
@@ -109,10 +116,7 @@ export function Form() {
                     }
                 </div>
             </div>
-
             <button className={styles.btn} onClick={validateCreditCard}>Confirm</button>
-
-
         </form >
     )
 }

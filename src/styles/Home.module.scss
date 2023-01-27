@@ -19,47 +19,56 @@
 }
 
 .containerRight {
-
   width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  perspective: 1000px;
 }
 
 .containerCards {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   margin-left: 180px;
+}
 
+.flipperRotation {
+  transform: rotateY(180deg);
+  /* se quiser uma animação na vertical,
+	troque por rotateX(180deg)
+	*/
+}
 
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 @media screen and (max-width: 768px) and (min-width: 375px) {
   .main {
-    width: 100vw;
-    height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .containerLeft {
     width: 100%;
-    height: 200px;
+    height: 250px;
   }
 
   .containerRight {
     width: 100%;
-    margin: auto;
-    padding-top: 3rem;
+    height: 100%;
+    margin-top: 50px;
   }
 
   .containerCards {
-
     width: 100%;
     margin-top: 50px;
     display: flex;

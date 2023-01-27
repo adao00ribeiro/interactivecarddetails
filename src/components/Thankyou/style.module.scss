@@ -1,0 +1,71 @@
+.group {
+    position: absolute;
+    width: 40%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+
+    button {
+        font-family: 'Space Grotesk';
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.75rem;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        background-color: var(--Very-dark-violet);
+    }
+}
+
+
+
+.containerIcon {
+
+    display: flex;
+    justify-content: center;
+
+
+    img {
+        width: 50px;
+        background-color: transparent;
+
+    }
+}
+
+.containerMensagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    span {
+        font-family: 'Space Grotesk';
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        color: var(--Dark-grayish-violet);
+        font-family: 'Space Grotesk';
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .group {
+
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .containerIcon {
+
+        img {
+            width: 80px;
+            background-color: transparent;
+
+        }
+    }
+}
