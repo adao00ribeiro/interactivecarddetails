@@ -73,14 +73,20 @@
 
 .input {
 
+    border: 1px solid var(--Light-grayish-violet);
     font-weight: bold;
     padding: 10px;
     border-radius: 8px;
     font-size: 1rem;
+
+}
+
+.inputColorRed {
+    border: 1px solid var(--Red);
 }
 
 .input:hover {
-    border: 2px solid var(--Very-dark-violet);
+    border: 1px solid var(--Very-dark-violet);
 }
 
 
