@@ -1,8 +1,12 @@
 .group {
     position: absolute;
-    width: 40%;
+    width: 350px;
+    height: 270px;
     transform: rotateY(180deg);
     backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     button {
         font-family: 'Space Grotesk';
@@ -19,13 +23,14 @@
 
 
 .containerIcon {
-
+    position: relative;
     display: flex;
     justify-content: center;
-
+    width: 80px;
+    height: 80px;
 
     img {
-        width: 50px;
+
         background-color: transparent;
 
     }

@@ -135,7 +135,7 @@ export function Form() {
                         <input ref={inputRefAno} className={styles.input} value={infoCards.cardano} onChange={handleInput} placeholder="YY" type="text" name="cardano" />
                     </div>
                     {error.dateerror &&
-                        <span>Can't be blank</span>
+                        <span>Cant be blank</span>
                     }
                 </div>
                 <div className={styles.containerDate}>
@@ -144,7 +144,7 @@ export function Form() {
                         <input ref={inputRefCVC} className={styles.input} value={infoCards.cardcvc} onChange={handleInput} placeholder="e.g. 123" type="text" name="cardcvc" />
                     </div>
                     {error.cvcerror &&
-                        <span>Can't be blank</span>
+                        <span> Cant be blank</span>
                     }
                 </div>
             </div>
