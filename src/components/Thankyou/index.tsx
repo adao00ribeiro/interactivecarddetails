@@ -10,7 +10,7 @@ export function ThankYou() {
             </div>
             <div className={styles.containerMensagem}>
                 <span>THANK YOU!</span>
-                <p>We've added your card details</p>
+                <p>We&apos;ve added your card details</p>
             </div>
             <button>Continue</button>
         </div >
