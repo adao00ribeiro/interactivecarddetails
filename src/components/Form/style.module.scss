@@ -99,10 +99,13 @@
     background-color: var(--Very-dark-violet);
 }
 
-@media screen and (max-width: 768px) and (min-width: 375px) {
+@media screen and (max-width: 1104px) {
     .form {
+        width: 90%;
+        margin: auto;
         display: flex;
         flex-direction: column;
     }
 
+    
 }
